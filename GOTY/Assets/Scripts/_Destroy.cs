@@ -11,9 +11,12 @@ public class _Destroy : MonoBehaviour
     float time_now=0f;
 
     void red_coin_activation()
-    {  
-        Move.player_speed *= 2;
-        red_coin_active = true;
+    {
+        if (red_coin_active == false)
+        {
+            Move.player_speed *= 2;
+            red_coin_active = true;
+        }
     }
 
     void red_coin_disactivation()
@@ -49,7 +52,11 @@ public class _Destroy : MonoBehaviour
             GetComponent<Renderer>().material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value,UnityEngine.Random.value, 1.0f);
             time_now += Time.deltaTime;
             if (time_now >= red_coin_effect_time)
+            {
                 red_coin_disactivation();
+                time_now = 0;
+            }
+            
         }
     }
 }
