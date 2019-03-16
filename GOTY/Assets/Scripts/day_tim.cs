@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class day_tim : MonoBehaviour
 {
 
-    public Text Phase_Time;
-    float day_time=sunset.day_time;
-    float night_time=sunset.night_time;
-    float time_now=0;
-    string str_day;
+    public Text Phase_Time;                //таймер до дня/ночи
+    float day_time=sunset.day_time;            //время длительности дня
+    float night_time=sunset.night_time;         //время длительности ночи
+    float time_now=0;                         //счётчик текущего времени
+    string str_day; //строки для вывода
     string str_night;
-    float time_before;
+    float time_before;//время дл вывода
     
     void Start()
     {
@@ -22,12 +22,12 @@ public class day_tim : MonoBehaviour
    
     void FixedUpdate()
     {
-        if (time_before == 0)
+        if (time_before == 0)//сброс счётчика при смене фазы
         {
             time_now = 0f;
         }
 
-        if (sunset.day)
+        if (sunset.day)           //время до ночм
         {
             
             time_now += Time.deltaTime;
@@ -36,7 +36,7 @@ public class day_tim : MonoBehaviour
             Phase_Time.text = "Время до ночи: " + str_day;
         }
         else
-        {
+        {                                                        //время до утра
             time_now +=  Time.deltaTime;
             time_before = Mathf.CeilToInt(night_time - time_now);
             str_night = time_before.ToString();

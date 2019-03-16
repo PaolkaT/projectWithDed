@@ -4,37 +4,36 @@ using UnityEngine;
 
 public class sunset : MonoBehaviour
 { 
-    public float lenght=1400f*1400f*3.14f/2f;
-    static public float day_time = 15f;
+ 
+    static public float day_time = 15f;//время для дневной и ночной фазы
     static public float night_time = 15f;
-    public float rot = 0f;
+    public float rot = 0f;//текуще вразение
     float z;
-    public float sun_speed;
-    public static bool day=true;
+    public float sun_speed;//скорость "солнца"
+    public static bool day=true;//день или ночь сейчас
     void Start()
     {              
-        sun_speed = lenght / day_time;
+        sun_speed = 180f / day_time;
     }
     void FixedUpdate()
     {
-        if (rot >= 360)
-            rot -= 360;
+        if (rot >= 360f)//сброс вращеия при полном обороте
+            rot -= 360f;
 
-        if (rot<180)
+        if (rot<180)//заход 
         {
-            day = true;
-          
-            sun_speed = lenght / day_time;
+            day = true;          
+            sun_speed = 180f / day_time;
         }
 
-        if (rot>180)
+        if (rot>180)//восход
         {
             day = false;            
-            sun_speed = lenght / night_time;
+            sun_speed = 180f / night_time;
 
         }
 
-        z = sun_speed*Time.deltaTime*Time.deltaTime*Time.deltaTime*Time.deltaTime*7.31f;
+        z = sun_speed*Time.deltaTime;
         transform.Rotate(Vector3.right, z);
         rot += z;
      

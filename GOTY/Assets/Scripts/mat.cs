@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mat : MonoBehaviour
+public class mat : MonoBehaviour         //вращение монеток
 {
     Quaternion originRotation;
     float angle=0f;
