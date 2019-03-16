@@ -6,7 +6,7 @@ public class sunset : MonoBehaviour
 { 
     public float lenght=1400f*1400f*3.14f/2f;
     static public float day_time = 15f;
-    static public float night_time = 5f;
+    static public float night_time = 15f;
     public float rot = 0f;
     float z;
     public float sun_speed;

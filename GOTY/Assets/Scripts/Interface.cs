@@ -26,7 +26,7 @@ public class Interface : MonoBehaviour
         metres.text = $"Пройденное расстояние: {Mathf.Ceil(rasst)} м";
         prev = inthistime;
 
-        cntCyl.text = $"Количество собранных монет: {_Destroy.count}";
+        cntCyl.text = $"Количество собранных жёлтых монет: {_Destroy.count_yellow}";
 
         if (sunset.day==false)
             buyhatt.SetActive(true);
@@ -36,10 +36,10 @@ public class Interface : MonoBehaviour
     }
     void ButtonClick()
     {
-        if (_Destroy.count >= 5)
+        if (_Destroy.count_yellow >= 5)
         {
             buyhatt.SetActive(true);
-            _Destroy.count -= 5;
+            _Destroy.count_yellow -= 5;
             hat.SetActive(true);
         }
     }
