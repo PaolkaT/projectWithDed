@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawn : MonoBehaviour         //спавн монеток
+public class Spawn : MonoBehaviour         //спавн монеток
 {
-    public GameObject [] prefabs;                     //массив монеток
-    public float time = 0.1f;  //услоное время появления
+    public GameObject[] prefabs;                     //массив монеток
+    public float time = 0.00000000000001f;  //условное время появления
     public float time_now;
 
     void create()//функция создания красной или жёлтой монетки в случайном положении
@@ -24,10 +24,9 @@ public class spawn : MonoBehaviour         //спавн монеток
         time_now = time;//счётчик времени
     }
 
-    
     void Update()
     {
-        if (sunset.day == false)          //появляются только ночью
+        if (Sunset.day == false)          //появляются только ночью
         {
             time_now -= Time.deltaTime;
             if (time_now <= 0)

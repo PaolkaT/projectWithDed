@@ -3,43 +3,47 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Interface : MonoBehaviour
+public class Interface : MonoBehaviour    //Скрипт для вывода интерфейса на экран игрока
 {
+  
+    Player igrok;
     public Text cntCyl;
     public Text metres;
     public GameObject player;
     public GameObject hat;
-    public GameObject buyhatt;
+    public GameObject buyhatt;         //Паша потом закомментит
     public Button buyhat;
     public Vector3 prev;
     public Vector3 inthistime;
     public float rasst;
     void Start()
     {
-        prev = player.transform.position;
+        igrok = player.GetComponent<Player>();
+        prev = igrok.transform.position;
         buyhatt.SetActive(false);
     }
     void Update()
     {
+
         inthistime = player.transform.position;
         rasst += Vector3.Magnitude(inthistime - prev);
         metres.text = $"Пройденное расстояние: {Mathf.Ceil(rasst)} м";
         prev = inthistime;
 
-        cntCyl.text = $"Количество собранных жёлтых монет: {_Destroy.count_yellow}";
+        cntCyl.text = $"Количество собранных  монет: {igrok.CountCoin}";
 
-        if (sunset.day==false)
+        if (Sunset.day == false)
             buyhatt.SetActive(true);
         buyhat.onClick.AddListener(ButtonClick);
-        if (sunset.day)
+        if (Sunset.day)
             buyhatt.SetActive(false);
     }
     void ButtonClick()
     {
-        if (_Destroy.count_yellow >= 5)
+        if (igrok.CountCoin >= 5)
         {
             buyhatt.SetActive(true);
-            _Destroy.count_yellow -= 5;
+            igrok.CountCoin -= 5;
             hat.SetActive(true);
         }
     }
