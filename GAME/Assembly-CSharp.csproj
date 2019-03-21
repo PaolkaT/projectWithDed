@@ -60,44 +60,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AngryCube_test.cs" />
-    <Compile Include="Assets\Scripts\CoinRotation.cs" />
-    <Compile Include="Assets\Scripts\CollosionWithPlayer.cs" />
-    <Compile Include="Assets\Scripts\ControlCamera.cs" />
-    <Compile Include="Assets\Scripts\CoolDown.cs" />
-    <Compile Include="Assets\Scripts\day_tim.cs" />
-    <Compile Include="Assets\Scripts\Destr.cs" />
-    <Compile Include="Assets\Scripts\Interface.cs" />
-    <Compile Include="Assets\Scripts\Leg_script.cs" />
-    <Compile Include="Assets\Scripts\Mouse_povorot_body.cs" />
-    <Compile Include="Assets\Scripts\Mouse_povorot_forEYE.cs" />
-    <Compile Include="Assets\Scripts\MouseScript.cs" />
-    <Compile Include="Assets\Scripts\Move.cs" />
-    <Compile Include="Assets\Scripts\Move_script.cs" />
-    <Compile Include="Assets\Scripts\MovementParticleEmitter.cs" />
-    <Compile Include="Assets\Scripts\MovePlayer.cs" />
-    <Compile Include="Assets\Scripts\PhaseTimer.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\RedCoinEffect.cs" />
-    <Compile Include="Assets\Scripts\Spawn.cs" />
-    <Compile Include="Assets\Scripts\Sunset.cs" />
+    <Compile Include="Assets\AngryCube_test.cs" />
+    <Compile Include="Assets\CoinRotation.cs" />
+    <Compile Include="Assets\CollosionWithPlayer.cs" />
+    <Compile Include="Assets\ControlCamera.cs" />
+    <Compile Include="Assets\CoolDown.cs" />
+    <Compile Include="Assets\day_tim.cs" />
+    <Compile Include="Assets\Destr.cs" />
+    <Compile Include="Assets\Interface.cs" />
+    <Compile Include="Assets\Leg_script.cs" />
+    <Compile Include="Assets\Mouse_povorot_body.cs" />
+    <Compile Include="Assets\Mouse_povorot_forEYE.cs" />
+    <Compile Include="Assets\MouseScript.cs" />
+    <Compile Include="Assets\Move.cs" />
+    <Compile Include="Assets\Move_script.cs" />
+    <Compile Include="Assets\MovementParticleEmitter.cs" />
+    <Compile Include="Assets\MovePlayer.cs" />
+    <Compile Include="Assets\PhaseTimer.cs" />
+    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\RedCoinEffect.cs" />
+    <Compile Include="Assets\Spawn.cs" />
+    <Compile Include="Assets\Sunset.cs" />
     <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\TerrainSplatmapCommonBlend.cginc" />
     <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\PBR_IntersectionMask.shader" />
     <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\Standard-FirstPass Blend.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/commit/GAME/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/commit/GAME/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/commit/GAME/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/commit/GAME/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/commit/GAME/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -301,13 +301,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/commit/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/commit/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/commit/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/commit/projectWithDed/GAME/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
