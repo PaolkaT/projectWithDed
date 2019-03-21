@@ -7,30 +7,31 @@ public class PhaseTimer : MonoBehaviour                   //скрипт для 
 {
 
     public Text Phase_Time;                //таймер до дня/ночи
-    float day_time = Sunset.day_time;            //время длительности дня
-    float night_time = Sunset.night_time;         //время длительности ночи
-    float time_now = 0;                         //счётчик текущего времени
+   public  float day_time = Sunset.day_time;            //время длительности дня
+   public float night_time = Sunset.night_time;         //время длительности ночи
+    public float time_now = 0;                         //счётчик текущего времени
     string str_day; //строки для вывода
     string str_night;
-    float time_before;//время дл вывода    
-
-    void FixedUpdate()
+    float time_before;//время дл вывода     
+    float time;
+     void Start()
     {
-        if (time_before == 0)//сброс счётчика при смене фазы
-        {
-            time_now = 0f;
-        }
+        time = night_time + day_time;
+    }
+    void Update()
+    {
+        
         if (Sunset.day)           //время до ночм
-        {
-            time_now += Time.deltaTime;
-            time_before = Mathf.CeilToInt(day_time - time_now);
+        {            
+            
+            time_before = Mathf.CeilToInt(day_time - (Time.time-(Sunset.dayCount*time)));
             str_day = time_before.ToString();
             Phase_Time.text = "Время до ночи: " + str_day;
         }
         else
-        {                                                        //время до утра
-            time_now += Time.deltaTime;
-            time_before = Mathf.CeilToInt(night_time - time_now);
+        {            
+            
+            time_before = Mathf.CeilToInt(night_time - (Time.time - (Sunset.dayCount * time)-day_time));
             str_night = time_before.ToString();
             Phase_Time.text = "Время до утра: " + str_night;
         }

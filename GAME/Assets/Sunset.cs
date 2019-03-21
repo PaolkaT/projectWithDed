@@ -7,6 +7,7 @@ public class Sunset : MonoBehaviour
 
     static public float day_time = 15f;//время для дневной и ночной фазы
     static public float night_time = 6f;
+    static public float  dayCount = 0f;
     public float rot = 0f;//текуще вразение
     float z;
     public float sun_speed;//скорость "солнца"
@@ -15,11 +16,13 @@ public class Sunset : MonoBehaviour
     {
         sun_speed = 180f / day_time;
     }
-    void FixedUpdate()
+    void Update()
     {
-        if (rot >= 360f)//сброс вращеия при полном обороте
+        if (rot >= 360f)
+        {//сброс вращеия при полном обороте
             rot -= 360f;
-
+            dayCount++;
+        }
         if (rot < 180)//заход 
         {
             day = true;

@@ -503,10 +503,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 183922939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8d5c1502e776d41a53f1737ecb4a70, type: 3}
+  m_Script: {fileID: 11500000, guid: f39deaa46d6c7a742b4741ab1bcd3862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Phase_Time: {fileID: 1791080994}
+  day_time: 15
+  night_time: 6
+  time_now: 0
 --- !u!114 &183922941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,6 +1439,36 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1310741974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310741975}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310741975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310741974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -66.16037, y: -233.61122, z: -234.63513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338327458
 GameObject:
   m_ObjectHideFlags: 0

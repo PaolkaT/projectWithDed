@@ -65,7 +65,6 @@
     <Compile Include="Assets\CollosionWithPlayer.cs" />
     <Compile Include="Assets\ControlCamera.cs" />
     <Compile Include="Assets\CoolDown.cs" />
-    <Compile Include="Assets\day_tim.cs" />
     <Compile Include="Assets\Destr.cs" />
     <Compile Include="Assets\Interface.cs" />
     <Compile Include="Assets\Leg_script.cs" />
