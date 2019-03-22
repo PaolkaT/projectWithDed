@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RedCoinEffect : MonoBehaviour            //Скрипт эффекта дял красной монеты
 {
-    Player igrok;
+    PlayerStats stats;
     Renderer rend;
     float red_coin_effect_time = 5f;                //время действия красной монеты
     bool red_coin_active = false;                      //  состояние активированности эффекта красной монеты
@@ -15,7 +15,7 @@ public class RedCoinEffect : MonoBehaviour            //Скрипт эффек�
         if (red_coin_active == false)                              //эффект не может примениться дважды
         {
             origin = rend.material.color;
-            igrok.PlayerSpeed *= 3;
+            stats.PlayerSpeed *= 3;
             red_coin_active = true;
         }
     }
@@ -23,12 +23,12 @@ public class RedCoinEffect : MonoBehaviour            //Скрипт эффек�
     public void red_coin_disactivation()                                                     //дезактивация эффекта красной монеты
     {
         rend.material.color = origin;
-        igrok.PlayerSpeed /= 3;
+        stats.PlayerSpeed /= 3;
         red_coin_active = false;
     }
     void Start()
     {
-        igrok = GetComponent<Player>();          //получения компонентов игрока
+        stats = GetComponent<PlayerStats>();          //получения компонентов игрока
         rend = GetComponent<Renderer>();
 
     }

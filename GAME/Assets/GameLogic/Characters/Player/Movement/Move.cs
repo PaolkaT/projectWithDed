@@ -3,18 +3,18 @@ using System.Collections;
 
 public class Move : MonoBehaviour   //Скрипт для передвижения игрока
 {
-    Player gamer;
+    PlayerStats stats;
     public float speed;
 
      void Start()
     {
-        gamer = GetComponent<Player>();
+        stats = GetComponent<PlayerStats>();
     }
     void Update()
     {
         if (Sunset.day)
         {
-            speed = gamer.PlayerSpeed;
+            speed = stats.PlayerSpeed;
             float a;
             a = Input.GetAxis("Vertical");
             if (a > 0) transform.Translate(transform.forward * speed * Time.deltaTime);

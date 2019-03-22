@@ -11,7 +11,7 @@ public class Destr : MonoBehaviour
     public float StartDelay = 3f; //начальное значение задержки
     public float Delay = 0f; //обновляемое значение задержки 
     public GameObject playerExplosion; //игровой объект
-    public Player player;
+    public PlayerStats player;
     Renderer rend;
     Color original;
     RedCoinEffect eff;
@@ -20,7 +20,7 @@ public class Destr : MonoBehaviour
     {
         eff = GetComponent<RedCoinEffect>();
         rend = GetComponent<Renderer>();
-        player = GetComponent<Player>();
+        player = GetComponent<PlayerStats>();
         original = rend.material.color;
         
     }

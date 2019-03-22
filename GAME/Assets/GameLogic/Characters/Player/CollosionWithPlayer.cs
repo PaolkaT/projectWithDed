@@ -5,13 +5,13 @@ using UnityEngine;
 public class CollosionWithPlayer : MonoBehaviour        //скрипт проверки всех коллизий игрока с объектами
 {
     RedCoinEffect RedEffect;
-    Player igrok;
+    PlayerStats stats;
     public GameObject GAMER;
     
 
     void Start()
     {
-        igrok = GAMER.GetComponent<Player>();
+        stats = GAMER.GetComponent<PlayerStats>();
         RedEffect = GetComponent<RedCoinEffect>();
     }
 
@@ -20,7 +20,7 @@ public class CollosionWithPlayer : MonoBehaviour        //скрипт пров�
         if (other.gameObject.name == "Coin" || other.gameObject.name == "Coin(Clone)")//уничтожение монеты и инкримент счётчика
         {
             Destroy(other.gameObject);
-            igrok.CountCoin++;         
+            stats.CountCoin++;         
         }
         if (other.gameObject.name == "RedCoin(Clone)")               //уничтожене красной монеты и активация эффекта
         {

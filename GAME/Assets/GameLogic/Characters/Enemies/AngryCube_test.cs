@@ -13,11 +13,11 @@ public class AngryCube_test : MonoBehaviour
     public float bot_skill_cd = 3f;
     public float bot_skill_Delay = 0f;
     public float bot_skill_cast_delay = 3f;
-    public Player player;
+    public PlayerStats player;
     void Start()
     {
         color = GameObject.FindGameObjectWithTag("Player");
-        player = color.GetComponent<Player>();
+        player = color.GetComponent<PlayerStats>();
     }
 
     void Update()

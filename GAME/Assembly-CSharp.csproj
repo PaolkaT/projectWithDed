@@ -68,9 +68,13 @@
     <Compile Include="Assets\GameLogic\Characters\Player\CollosionWithPlayer.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\Movement\Leg_script.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\Movement\Move.cs" />
-    <Compile Include="Assets\GameLogic\Characters\Player\Player.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\PlayerStats.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\Skills\Destr.cs" />
-    <Compile Include="Assets\GameLogic\UI\Interface.cs" />
+    <Compile Include="Assets\GameLogic\UI\CoinsCount.cs" />
+    <Compile Include="Assets\GameLogic\UI\CoolDown.cs" />
+    <Compile Include="Assets\GameLogic\UI\HatButton.cs" />
+    <Compile Include="Assets\GameLogic\UI\Hp.cs" />
+    <Compile Include="Assets\GameLogic\UI\MetresCount.cs" />
     <Compile Include="Assets\GameLogic\UI\PhaseTimer.cs" />
     <Compile Include="Assets\GameLogic\Unknown\MovementParticleEmitter.cs" />
     <Compile Include="Assets\GameLogic\World\Global\Sunset.cs" />

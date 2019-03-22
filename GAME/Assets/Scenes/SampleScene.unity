@@ -485,8 +485,12 @@ GameObject:
   - component: {fileID: 183922943}
   - component: {fileID: 183922942}
   - component: {fileID: 183922941}
-  - component: {fileID: 183922940}
+  - component: {fileID: 183922949}
+  - component: {fileID: 183922948}
+  - component: {fileID: 183922947}
+  - component: {fileID: 183922946}
   - component: {fileID: 183922945}
+  - component: {fileID: 183922940}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -503,13 +507,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 183922939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f39deaa46d6c7a742b4741ab1bcd3862, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b0461a4be45e5246953a889b65976bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Phase_Time: {fileID: 1791080994}
-  day_time: 15
-  night_time: 6
-  time_now: 0
+  player: {fileID: 5018143222901258395}
+  count: {fileID: 1137345150}
 --- !u!114 &183922941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,20 +606,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 183922939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab96ef89e5db6b44ae79d3c9d531dfe, type: 3}
+  m_Script: {fileID: 11500000, guid: f690e847292c00b418710a9450b1fe5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cntCyl: {fileID: 1137345150}
-  metres: {fileID: 1039949181}
-  player: {fileID: 5018143222901258395}
+  Player: {fileID: 5018143222901258395}
+  cd: {fileID: 1827694648}
+--- !u!114 &183922946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183922939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6988ca3d77a491840867f20d5b39dad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 5018143222901258395}
+  BuyHat: {fileID: 767773961}
+  button: {fileID: 767773960}
   hat: {fileID: 453925212}
-  buyhatt: {fileID: 767773960}
-  buyhat: {fileID: 767773961}
+--- !u!114 &183922947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183922939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cd00ce0ff88b54c92ecde623e225c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 98824458}
+  Player: {fileID: 5018143222901258395}
+--- !u!114 &183922948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183922939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158914f3d620ae94982db47b373871c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metres: {fileID: 1039949181}
   prev: {x: 0, y: 0, z: 0}
   inthistime: {x: 0, y: 0, z: 0}
   rasst: 0
-  HP: {fileID: 98824458}
-  KADE: {fileID: 1827694648}
+  player: {fileID: 5018143222901258395}
+--- !u!114 &183922949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183922939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39deaa46d6c7a742b4741ab1bcd3862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Phase_Time: {fileID: 1791080994}
+  day_time: 15
+  night_time: 6
+  time_now: 0
 --- !u!1 &345493973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1425,7 @@ GameObject:
   - component: {fileID: 1137345151}
   - component: {fileID: 1137345150}
   m_Layer: 5
-  m_Name: Interface
+  m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -430, y: 290}
+  m_AnchoredPosition: {x: -342, y: 290}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1220850436

@@ -7,8 +7,8 @@ public class PhaseTimer : MonoBehaviour                   //скрипт для 
 {
 
     public Text Phase_Time;                //таймер до дня/ночи
-   public  float day_time = Sunset.day_time;            //время длительности дня
-   public float night_time = Sunset.night_time;         //время длительности ночи
+    public  float day_time = Sunset.day_time;            //время длительности дня
+    public float night_time = Sunset.night_time;         //время длительности ночи
     public float time_now = 0;                         //счётчик текущего времени
     string str_day; //строки для вывода
     string str_night;
