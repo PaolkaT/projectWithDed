@@ -66,10 +66,10 @@
     <Compile Include="Assets\GameLogic\Camera\Mouse_povorot_forEYE.cs" />
     <Compile Include="Assets\GameLogic\Characters\Enemies\AngryCube_test.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\CollosionWithPlayer.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\Movement\Leg_script.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\Movement\Move.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\Player.cs" />
     <Compile Include="Assets\GameLogic\Characters\Player\Skills\Destr.cs" />
-    <Compile Include="Assets\GameLogic\Movement\Leg_script.cs" />
-    <Compile Include="Assets\GameLogic\Movement\Move.cs" />
     <Compile Include="Assets\GameLogic\UI\Interface.cs" />
     <Compile Include="Assets\GameLogic\UI\PhaseTimer.cs" />
     <Compile Include="Assets\GameLogic\Unknown\MovementParticleEmitter.cs" />
