@@ -60,29 +60,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AngryCube_test.cs" />
-    <Compile Include="Assets\CoinRotation.cs" />
-    <Compile Include="Assets\CollosionWithPlayer.cs" />
-    <Compile Include="Assets\ControlCamera.cs" />
-    <Compile Include="Assets\CoolDown.cs" />
-    <Compile Include="Assets\Destr.cs" />
-    <Compile Include="Assets\Interface.cs" />
-    <Compile Include="Assets\Leg_script.cs" />
-    <Compile Include="Assets\Mouse_povorot_body.cs" />
-    <Compile Include="Assets\Mouse_povorot_forEYE.cs" />
-    <Compile Include="Assets\MouseScript.cs" />
-    <Compile Include="Assets\Move.cs" />
-    <Compile Include="Assets\Move_script.cs" />
-    <Compile Include="Assets\MovementParticleEmitter.cs" />
-    <Compile Include="Assets\MovePlayer.cs" />
-    <Compile Include="Assets\PhaseTimer.cs" />
-    <Compile Include="Assets\Player.cs" />
-    <Compile Include="Assets\RedCoinEffect.cs" />
-    <Compile Include="Assets\Spawn.cs" />
-    <Compile Include="Assets\Sunset.cs" />
-    <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\TerrainSplatmapCommonBlend.cginc" />
-    <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\PBR_IntersectionMask.shader" />
-    <None Include="Assets\Materials\Terrain_Blending_Starter_Kit\Assets\Shaders\Standard-FirstPass Blend.shader" />
+    <Compile Include="Assets\GameLogic\Camera\ControlCamera.cs" />
+    <Compile Include="Assets\GameLogic\Camera\HideCursor.cs" />
+    <Compile Include="Assets\GameLogic\Camera\Mouse_povorot_body.cs" />
+    <Compile Include="Assets\GameLogic\Camera\Mouse_povorot_forEYE.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Enemies\AngryCube_test.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\CollosionWithPlayer.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\Movement\Leg_script.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\Movement\Move.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\PlayerStats.cs" />
+    <Compile Include="Assets\GameLogic\Characters\Player\Skills\Destr.cs" />
+    <Compile Include="Assets\GameLogic\UI\CoinsCount.cs" />
+    <Compile Include="Assets\GameLogic\UI\CoolDown.cs" />
+    <Compile Include="Assets\GameLogic\UI\HatButton.cs" />
+    <Compile Include="Assets\GameLogic\UI\Hp.cs" />
+    <Compile Include="Assets\GameLogic\UI\MetresCount.cs" />
+    <Compile Include="Assets\GameLogic\UI\PhaseTimer.cs" />
+    <Compile Include="Assets\GameLogic\Unknown\MovementParticleEmitter.cs" />
+    <Compile Include="Assets\GameLogic\World\Global\Sunset.cs" />
+    <Compile Include="Assets\GameLogic\World\Objects\CoinRotation.cs" />
+    <Compile Include="Assets\GameLogic\World\Objects\RedCoinEffect.cs" />
+    <Compile Include="Assets\GameLogic\World\Objects\Spawn.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/commit/projectWithDed/GAME/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
