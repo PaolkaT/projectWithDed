@@ -7,5 +7,6 @@ public class PlayerStats : MonoBehaviour        //срипт со всеми д�
     public int hp = 3;
     public float PlayerSpeed = 6f;
     public int CountCoin=0;
+    public bool whiteskillLearned = false;
     
 }    
