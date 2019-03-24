@@ -46,7 +46,7 @@ public class Destr : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Q) && Delay < 0 && other.tag == "enemy") //условие действия способности
+        if (Input.GetKeyDown(KeyCode.Z) && Delay < 0 && other.tag == "enemy") //условие действия способности
         {
             GameObject[] list = GameObject.FindGameObjectsWithTag("enemy");
             int i = list.Length;
