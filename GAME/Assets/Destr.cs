@@ -74,4 +74,9 @@ public class Destr : MonoBehaviour
     {
         Delay = StartDelay;
     }
+
+    public void TakeDamage(int damage) //получение урона
+    {
+        player.hp -= damage;
+    }
 }
