@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public PlayerStats player;
-    public GameObject hat;
-    public GameObject whitehat;
+    public GameObject appearingObject;
     public GameObject hattext;
     public Text hattexttext;
     public Transform panel;
@@ -16,9 +15,9 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!Sunset.day)
         {
-            if (hat.name == "hat")
+            if (appearingObject.name == "hat")
                 hattexttext.text = ("Шляпа за 5 монет!");
-            if (hat.name == "whitehat")
+            if (appearingObject.name == "whitehat")
                 hattexttext.text = ("Ультракрутая и модная шляпа за 10 монет!");
             hattext.SetActive(true);
         }
@@ -31,22 +30,21 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!Sunset.day)
         {
-            if (hat.name == "hat" && player.CountCoin >= 5)
+            if (appearingObject.name == "hat" && player.CountCoin >= 5)
             {
                 player.CountCoin -= 5;
-                hat.SetActive(true);
+                appearingObject.SetActive(true);
             }
-            if (hat.name == "whitehat" && player.CountCoin >= 10)
+            if (appearingObject.name == "whitehat" && player.CountCoin >= 10)
             {
-                    player.CountCoin -= 10;
-                    whitehat.SetActive(true);
-               
+                player.CountCoin -= 10;
+                appearingObject.SetActive(true);
             }
         }
     }
     void Update()
     {
-        if(!Sunset.day)
+        if (!Sunset.day)
         panel.position = Input.mousePosition + new Vector3 (15, 15);
     }
 }
