@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SkillTree : MonoBehaviour
 {
+    bool IsActive;
     public GameObject Tree;
     void Start()
     {
@@ -13,7 +14,10 @@ public class SkillTree : MonoBehaviour
   
     void Update()
     {
-        if (Sunset.day == false)
+        IsActive = Tree.activeInHierarchy;
+        if ( IsActive ==  false && Input.GetKeyDown(KeyCode.T))
             Tree.SetActive(true);
+        if (IsActive == true && Input.GetKeyDown(KeyCode.T))
+            Tree.SetActive(false);
     }
 }

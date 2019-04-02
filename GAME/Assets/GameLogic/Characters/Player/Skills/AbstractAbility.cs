@@ -12,5 +12,6 @@ public abstract class AbstractAbility : MonoBehaviour
     public abstract void SkillDisactivation();
     public abstract string AbilityName { get; set; }
     public abstract Sprite AbilityIMG { get; set; }
+    public abstract string AbilityDescription { get; set; }
     
 }

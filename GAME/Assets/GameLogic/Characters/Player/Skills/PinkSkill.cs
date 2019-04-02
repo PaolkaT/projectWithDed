@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueSkill : AbstractAbility
+public class PinkSkill : AbstractAbility
 {
     SkillManager manager;
     KeyCode key;
+    Color col = new Color(196, 0, 236, 255);
     public float CD = 3f;
     public float cast = 0f;
     public float time = 1f;
     public float timenow;
-    public string SkillName = "BlueSkill";
+    public string SkillName = "PinkSkill";
     public Sprite SkillIMG;
-    public string Desc = "Blue";
+    public string Desc = "Pink";
     public float Delay;
     Color origin;
     Renderer rend;
@@ -106,7 +107,7 @@ public class BlueSkill : AbstractAbility
 
     void Start()
     {
-        SkillIMG = Resources.Load<Sprite>("Textures/Blue");
+        SkillIMG = Resources.Load<Sprite>("Textures/Pink");
         manager = GetComponent<SkillManager>();
         key = manager.AddSkill(AbilityIMG);
         rend = GetComponent<Renderer>();
@@ -125,7 +126,7 @@ public class BlueSkill : AbstractAbility
         }
         if (isactive)
         {
-            rend.material.color = Color.blue;
+            rend.material.color = col;
             timenow += Time.deltaTime;
             if (timenow > AbilityTime)
                 SkillDisactivation();

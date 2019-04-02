@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BuyBlueSkill : MonoBehaviour
+public class BuyPinkSkill : MonoBehaviour
 {
-    public Image Next;
     public Image Learned;
     public GameObject player;
     PlayerStats stats;
@@ -15,9 +14,8 @@ public class BuyBlueSkill : MonoBehaviour
         if (stats.SKillPoint > 0 && Learned.color == Color.gray)
         {
             stats.SKillPoint--;
-            player.AddComponent<BlueSkill>();
+            player.AddComponent<PinkSkill>();
             Learned.color = Color.white;
-            Next.color = Color.gray;
         }
 
     }
