@@ -22,10 +22,7 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!Sunset.day)
         {
-            if (gameObject.name == "RawImage") //вот эту строчку нужно изменить при склеивании
-                hattexttext.text = enterText;
-            if (gameObject.name == "RawImage (1)") //эту тоже
-                hattexttext.text = enterText;
+            hattexttext.text = enterText;
             hattext.SetActive(true);
         }
     }
