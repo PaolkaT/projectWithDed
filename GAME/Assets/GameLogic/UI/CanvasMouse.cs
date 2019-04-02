@@ -6,11 +6,17 @@ using UnityEngine.UI;
 
 public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
-    public PlayerStats player;
     public GameObject hattext;
     public Text hattexttext;
     public Transform panel;
     GameObject appearingObject;
+    PlayerStats player;
+    GameObject body;
+    void Start()
+    {
+        body = GameObject.Find("Body"); //GameObjectWithTag("Player");
+        player = body.GetComponent<PlayerStats>();
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!Sunset.day)
