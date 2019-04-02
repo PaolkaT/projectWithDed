@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public PlayerStats player;
-    public GameObject appearingObject;
     public GameObject hattext;
     public Text hattexttext;
     public Transform panel;
+    GameObject appearingObject;
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!Sunset.day)
         {
-            if (appearingObject.name == "hat")
+            if (gameObject.name == "RawImage") //вот эту строчку нужно изменить при склеивании
                 hattexttext.text = ("Шляпа за 5 монет!");
-            if (appearingObject.name == "whitehat")
+            if (gameObject.name == "RawImage (1)") //эту тоже
                 hattexttext.text = ("Ультракрутая и модная шляпа за 10 монет!");
             hattext.SetActive(true);
         }
@@ -30,14 +30,16 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!Sunset.day)
         {
-            if (appearingObject.name == "hat" && player.CountCoin >= 5)
+            if (gameObject.name == "RawImage" && player.CountCoin >= 5) //и эту
             {
                 player.CountCoin -= 5;
+                appearingObject = player.transform.Find("hat").gameObject;
                 appearingObject.SetActive(true);
             }
-            if (appearingObject.name == "whitehat" && player.CountCoin >= 10)
+            if (gameObject.name == "RawImage (1)" && player.CountCoin >= 10) //и даже эту
             {
                 player.CountCoin -= 10;
+                appearingObject = player.transform.Find("whitehat").gameObject;
                 appearingObject.SetActive(true);
             }
         }
@@ -45,6 +47,6 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void Update()
     {
         if (!Sunset.day)
-        panel.position = Input.mousePosition + new Vector3 (15, 15);
+            panel.position = Input.mousePosition + new Vector3(15, 15);
     }
 }
