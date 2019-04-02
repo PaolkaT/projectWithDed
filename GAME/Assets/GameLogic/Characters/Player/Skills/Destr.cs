@@ -15,6 +15,7 @@ public class Destr : MonoBehaviour
     Renderer rend;
     Color original;
     RedCoinEffect eff;
+    public AngryCube_test bot;
 
     void Start()
     {
@@ -53,8 +54,9 @@ public class Destr : MonoBehaviour
             while (--i >= 0)
             {
                 GameObject obj = list[i];
+                bot = obj.GetComponent<AngryCube_test>();
                 if (Vector3.Distance(obj.transform.position, playerExplosion.transform.position) < rad + 0.5f) //находится ли враг внутри радиуса действия способности
-                    Destroy(obj.gameObject); //уничтожение врага
+                    bot.bot_hp--;
             }
             playerExplosion.GetComponent<Renderer>().material.color = Color.black; //обозначение перезарядки цветом
             RefreshDelay(); //обновление перезарядки
