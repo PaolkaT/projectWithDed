@@ -9,6 +9,7 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject hattext;
     public Text hattexttext;
     public Transform panel;
+    public string enterText;
     GameObject appearingObject;
     PlayerStats player;
     GameObject body;
@@ -22,9 +23,9 @@ public class CanvasMouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (!Sunset.day)
         {
             if (gameObject.name == "RawImage") //вот эту строчку нужно изменить при склеивании
-                hattexttext.text = ("Шляпа за 5 монет!");
+                hattexttext.text = enterText;
             if (gameObject.name == "RawImage (1)") //эту тоже
-                hattexttext.text = ("Ультракрутая и модная шляпа за 10 монет!");
+                hattexttext.text = enterText;
             hattext.SetActive(true);
         }
     }
