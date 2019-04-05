@@ -2,8 +2,9 @@
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Destr : MonoBehaviour
+public class NetDestr : NetworkBehaviour
 {
 
     [Range(0.0f, 10.0f)]
@@ -19,13 +20,12 @@ public class Destr : MonoBehaviour
     void Start()
     {
         eff = GetComponent<RedCoinEffect>();
-        rend = GetComponentInParent<Renderer>();
-        player = GetComponentInParent<PlayerStats>();
+        rend = GetComponent<Renderer>();
+        player = GetComponent<PlayerStats>();
         original = rend.material.color;
-        
     }
-    
-    void OnCollisionEnter(Collision collision)
+
+    public void ReactCollision(Collider collision)
     {
         if (collision.gameObject.tag == "Coin")
         {
@@ -38,30 +38,30 @@ public class Destr : MonoBehaviour
             eff.red_coin_activation();
         }
         if (collision.gameObject.tag == "enemy") //если враг
-        { 
+        {
             player.hp -= 1; //уменьшение хр
             Destroy(collision.gameObject); //уничтожение врага
         }
     }
 
-    void OnTriggerStay(Collider other)
-    {
-        if ((Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0)) && Delay < 0 && other.tag == "enemy") //условие действия способности
-        {
-            GameObject[] list = GameObject.FindGameObjectsWithTag("enemy");
-            int i = list.Length;
-            while (--i >= 0)
-            {
-                GameObject obj = list[i];
-                bot = obj.GetComponent<AngryCube_test>();
-                if (Vector3.Distance(obj.transform.position, gameObject.transform.position) < rad + 0.5f) //находится ли враг внутри радиуса действия способности
-                    bot.bot_hp--;
-            }
-            gameObject.GetComponent<Renderer>().material.color = Color.black; //обозначение перезарядки цветом
-            RefreshDelay(); //обновление перезарядки
-        }
-    }
-    
+    //void OnTriggerStay(Collider other)
+    //{
+    //    if ((Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0)) && Delay < 0 && other.tag == "enemy") //условие действия способности
+    //    {
+    //        GameObject[] list = GameObject.FindGameObjectsWithTag("enemy");
+    //        int i = list.Length;
+    //        while (--i >= 0)
+    //        {
+    //            GameObject obj = list[i];
+    //            bot = obj.GetComponent<AngryCube_test>();
+    //            if (Vector3.Distance(obj.transform.position, gameObject.transform.position) < rad + 0.5f) //находится ли враг внутри радиуса действия способности
+    //                bot.bot_hp--;
+    //        }
+    //        rend.material.color = Color.black; //обозначение перезарядки цветом
+    //        RefreshDelay(); //обновление перезарядки
+    //    }
+    //}
+
     void Update()
     {
         if (player.hp <= 0) //условие смерти ГГ

@@ -18,6 +18,11 @@ public class WhiteSkill : AbstractAbility {
     Renderer rend;
     bool isactive = false;
 
+    public override string AbilityDescription {
+        get => throw new System.NotImplementedException();
+        set => throw new System.NotImplementedException();
+    }
+
     public override float Cooldown { get
         {
             return CD;
